@@ -80,6 +80,6 @@ return render(request, 'mroom/index.html', context)
 여기까지 하면
 urls -> views -> html -> css, js 까지 오면 끝이난다.
 DB처리는 views.py에서 전부 처리한다.
-urls
-views <-> DB
-html
+  urls
+  views <-> DB
+  html
