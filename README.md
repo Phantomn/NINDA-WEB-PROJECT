@@ -43,21 +43,28 @@ sudo apt-get dist-upgrade # 완전히 지우고 재설치
 
 grant all privileges on 디비.* to root@'%' identified by '비번' with grant option;
 flush privileges;         # 해당DB에root추가('%')
+
 grant all privileges on 디비.* to 아이디@'%' identified by '비번' with grant option;
 flush privileges;         # 해당DB에ID추가('%')
 
 select host, user from mysql.user; # 계정권한보기
+
 root는 host가 %로만들어지면 보안상 매우 취약해진다. 외부에서 접근이 가능해지기 때문이다
+
 그렇기때문에 root는 localhost로만 넣어두고 다른계정으로 조작을하는것
 
 <django 초기셋팅>
 ----------------------------------------------------
 settings.py에서 
+
 name -> DB명
+
 user -> hostid
+
 password -> 설정한것
 
 django는 project밑에 여러개의 application으로 이루어진다.
+
 ex>
 mroom (프로젝트)
 - mroom (어플)
@@ -101,4 +108,5 @@ html
 <참고자료>
 ---------
 http://luckyyowu.tistory.com/184
+
 https://tutorial.djangogirls.org/ko/django_models/
