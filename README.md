@@ -69,17 +69,17 @@ mroom (어플)로 이동해서 urls.py 수정.
 path('', views.index, name='index') 로직을 타게 된다.
 from . import views 현재 urls.py가 있는 디렉토리 위치에서 views.py로 연결
 
-urls.py inner:
-	path('', views.index, name='index'),
-	#IP:PORT/ 주소로 들어오면 views.py에 def index함수를 실행시켜라 라는 뜻.
-	이후 파이썬 코드가 실행되고 연산된 값만 html로 던져주는데
-	return render(request, 'mroom/index.html', context)
-	'mroom/index.html' 그래서 이부분 연산을 python으로 짜고 결과값만 html에다가 던져주면 표시 할 수 있게된다. 그래서 django가 쉽다라는 것이다.
+urls.py 소스에서
+path('', views.index, name='index'),
+#IP:PORT/ 주소로 들어오면 views.py에 def index함수를 실행시켜라 라는 뜻.
+이후 파이썬 코드가 실행되고 연산된 값만 html로 던져주는데
+return render(request, 'mroom/index.html', context)
+'mroom/index.html' 그래서 이부분 연산을 python으로 짜고 결과값만 html에다가 던져주면 표시 할 수 있게된다. 그래서 django가 쉽다라는 것이다.
 
-	우선 urls -> views -> html 을 만들고
-	여기까지 하면
-	urls -> views -> html -> css, js 까지 오면 끝이난다.
-	DB처리는 views.py에서 전부 처리한다.
-	urls
-	views <-> DB
-	html
+우선 urls -> views -> html 을 만들고
+여기까지 하면
+urls -> views -> html -> css, js 까지 오면 끝이난다.
+DB처리는 views.py에서 전부 처리한다.
+urls
+views <-> DB
+html
