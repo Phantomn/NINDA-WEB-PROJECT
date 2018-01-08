@@ -1,2 +1,4 @@
-# NimdaPHP
-NIMDA PHP
+# NIMDA Web Project
+NIMDA Web Project
+
+Apache - django+Python - MySQL
