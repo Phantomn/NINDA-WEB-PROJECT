@@ -97,3 +97,8 @@ urls
 views <-> DB
 
 html
+
+<참고자료>
+---------
+http://luckyyowu.tistory.com/184
+https://tutorial.djangogirls.org/ko/django_models/
