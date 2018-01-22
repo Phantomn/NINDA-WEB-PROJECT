@@ -37,8 +37,11 @@ pip install -r requirements.txt
 sudo apt-cache policy mysql-server # Linux Repo에 저장되어있는 버전 확인
 
 sudo apt-get purge mysql*
+
 sudo apt-get autoremove
+
 sudo apt-get autoclean
+
 sudo apt-get dist-upgrade # 완전히 지우고 재설치
 
 grant all privileges on 디비.* to root@'%' identified by '비번' with grant option;
