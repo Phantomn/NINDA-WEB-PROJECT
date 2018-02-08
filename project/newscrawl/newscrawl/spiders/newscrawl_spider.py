@@ -4,6 +4,7 @@ from newscrawl.items import NewscrawlItem
 from scrapy.selector import HtmlXPathSelector
 from scrapy import Request
 from urllib.parse import *
+import re
 
 class NewscrawlSpider(scrapy.Spider):
 	name = "newscrawl"
@@ -22,6 +23,9 @@ class NewscrawlSpider(scrapy.Spider):
 		response.selector.remove_namespaces()
 		for sel in response.xpath('//div[@id="media"]/table[2]//table//tr/td/a[1]'):
 			item['title'] = sel.select('span/text()').extract()
-			link = urljoin("http://www.boannews.com" , sel.select('@href').extract()[0])
+			link = sel.select('@href').extract()[0]
+			link = re.search(r'^/media/view.asp\?idx=[0-9]{1,6}',link)
+			replaced_link = link.group()
+			link = urljoin("http://www.boannews.com" , replaced_link)
 			item['link'] = link
 			yield item
