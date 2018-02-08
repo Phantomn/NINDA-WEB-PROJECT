@@ -3,7 +3,6 @@ NIMDA Web Project
 
 Apache - django+Python - MySQL
 ----------------------------------------------------
-<<<<<<< HEAD
 
 교재(http://www.hanbit.co.kr/store/books/look.php?p_code=B5790464800)
 ----------------------------------------------------
@@ -123,4 +122,3 @@ html
 http://luckyyowu.tistory.com/184
 
 https://tutorial.djangogirls.org/ko/django_models/
->>>>>>> 5b09df0cdcba8b3b15cf9bcc1b4bf9fd5c01c6a7

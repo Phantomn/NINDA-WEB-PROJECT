@@ -5,7 +5,6 @@ from scrapy.selector import HtmlXPathSelector
 from scrapy import Request
 from urllib.parse import *
 
-
 class NewscrawlSpider(scrapy.Spider):
 	name = "newscrawl"
 
